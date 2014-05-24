@@ -1,0 +1,28 @@
+{
+  "name": "easy-request",
+  "version": "0.0.1",
+  "description": "simple request tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jarvys/easy-request"
+  },
+  "keywords": [
+    "request",
+    "http",
+    "json"
+  ],
+  "author": "Jarvys <yuhan534@126.com> (https://jarvys.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarvys/easy-request/issues"
+  },
+  "homepage": "https://github.com/jarvys/easy-request",
+  "dependencies": {
+    "request": "~2.36.0",
+    "when": "~3.2.1"
+  }
+}
