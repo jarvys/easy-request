@@ -2,7 +2,7 @@ var request = require("request");
 var when = require("when");
 
 var post = function(url, data, type) {
-	type = type || 'raw';
+	type = type || 'json';
 	var deferred = when.defer();
 
 	request.post(url, {
@@ -16,14 +16,14 @@ var post = function(url, data, type) {
 			deferred.reject(resp.statusCode);
 		}
 
-		deferred.resolve(type === 'raw' ? body : JSON.parse(body);
+		deferred.resolve(type === 'json' ? JSON.parse(body) : body);
 	});
 
 	return deferred.promise;
 };
 
 var get = function(url, type) {
-	type = type || 'raw';
+	type = type || 'json';
 	var deferred = when.defer();
 
 	request(url,function(err, resp, body) {
@@ -35,7 +35,7 @@ var get = function(url, type) {
 			deferred.reject(resp.statusCode);
 		}
 
-		deferred.resolve(type === 'raw' ? body : JSON.parse(body);
+		deferred.resolve(type === 'json' ? JSON.parse(body) : body);
 	});
 
 	return deferred.promise;

@@ -1,6 +1,6 @@
 {
   "name": "easy-request",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple request tool",
   "main": "index.js",
   "scripts": {
